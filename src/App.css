@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Ubuntu", sans-serif !important;
+}
+.rhs{
+    display: flex;
+    align-items: center;
+    margin-left: 550px;
+}
+.profile{
+    margin-left: 35px;
+    color: black;
+}
+.rnav {
+    background-color: rgb(236, 234, 234);
+    height: 40px;
+    width: 300px;
+    font-size:medium;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 120px;  
+    color:black;
+    font-weight: bolder; 
+    font-size: larger;
+}
+nav ul li{
+    padding-right: 30px;
+}
+.container{
+    display: flex;
+    box-shadow: 0px 1px 10px rgb(219, 218, 218);
+    width: 100%;
+}
+.brand{
+    display: flex;
+    align-items: center;
+}
+.brand img{
+    width: 140px;
+}
+#h1{
+    padding: 20px;
+    font-weight: lighter;
+}
+.titlebar{
+    display:flex;
+    height: 70px;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    box-shadow: 0px 3px 3px rgb(226, 226, 226);
+}
+.titlebar li{
+    padding: 30px;
+    align-items: center;
+}
+.filters{
+    width: 15%;
+    left: 20px;
+}
+.ss{
+    color: gray;
+    cursor: pointer;
+}
+.dropdown-content{
+    margin-top: 20px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-weight: normal;
+    font-size: medium;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.ss:hover .dropdown-content {display: block;}
+.sf{
+    color: rgb(255, 7, 201);
+}
+.uf{
+    color:rgb(4, 71, 214);
+}
+.Home{
+    display: flex;
+}
+.filterDrop{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 20px;
+    height: 25%;
+    font-weight: lighter;
+    border: 1px solid rgb(226, 226, 226);
+}
+.filterDrop ul{
+    list-style-type: none;
+    padding-top: 20px;
+}
+.filterDrop ul li{
+    padding-bottom: 20px;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+}
+.pdt{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid red;
+    height: fit-content;
+    align-items: center;
+}
+#pdtTitle{
+    margin-top: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    padding: 50px;
+    border-bottom: 1px solid gray;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.work{
+    display: flex;
+    height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wl{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vw;
+    padding: 20px;
+    border-right: 2px solid rgb(226, 226, 226);
 }
-
-.App-link {
-  color: #61dafb;
+#profiles{
+    font-size: xx-large;
+    padding-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.names{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    color: gray;
+}
+.name{
+    padding-bottom: 10px;
+}
+.wr{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.gender{
+    margin: 10px;
+    display: flex; 
+    width: 100%;
+    height: 10%; 
+    justify-content: center;
+    font-size: x-large;
+}
+#male{
+    padding: 20px;
+    box-shadow: -1px 0px 5px gray;
+}
+#female{
+    padding: 20px;
+    box-shadow: 1px 0px 5px gray;    
+}
+.dimensions{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.pws{
+    display: flex;
+    margin: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+    font-size: larger;
+}
+.sizes{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: x-large;
+    color: darkorange;
+}
+.conf{
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid darkorange;
 }
