@@ -1,25 +1,25 @@
 import React from 'react'
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const titlebar = () => {
     return (
         <div>
-        <ul class="titlebar">
-            <li class="filters">FILTERS</li>
-            <li class="ss">
-                Smart Size
-                <div class="dropdown-content">
-                    <a href="#">Buying for Akshit</a>
-                    <a href="#">Buying for Ashutosh</a>
-                    <a href="#">Buying for Aarjaviy</a>
-                    <a href="#">Buying for Pravesh</a>
-                    <a href="#">Buying for Dipti</a>
-                    <a href="#">Add Size Profile</a>
-                </div>
-            </li>
-            <li class="sf">Save Filter</li>
-            <li class="uf">Update Filter</li>
-        </ul>
-    </div>
+            <ul className="titlebar">
+                <li className="filters">FILTERS</li>
+                <li className="ss">
+                    <Link to="/sizeprofile">Smart Size</Link>
+                    <div className="dropdown-content">
+                        <Link to="/">Buying for Akshit</Link>
+                        <Link to="/">Buying for Ashutosh</Link>
+                        <Link to="/">Buying for Aarjaviy</Link>
+                        <Link to="/">Buying for Pravesh</Link>
+                        <Link to="/">Buying for Dipti</Link>
+                        <Link to="/">Add Size Profile</Link>
+                    </div>
+                </li>
+                <li className="sf">Save Filter</li>
+                <li className="uf">Update Filter</li>
+            </ul>
+        </div>
     )
 }
 

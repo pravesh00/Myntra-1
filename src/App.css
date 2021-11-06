@@ -74,6 +74,10 @@ nav ul li{
     color: gray;
     cursor: pointer;
 }
+.ss a{
+    text-decoration: none;
+    color: gray;
+}
 .dropdown-content{
     margin-top: 20px;
     display: none;
