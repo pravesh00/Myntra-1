@@ -118,6 +118,10 @@ nav ul li{
     list-style-type: none;
     padding-top: 20px;
 }
+.filterDrop div{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
 .filterDrop ul li{
     padding-bottom: 20px;
 }
