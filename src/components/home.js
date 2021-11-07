@@ -61,7 +61,7 @@ const Home = () => {
         <div className="Home">
             <div className="filterDrop">
                 <h4>SAVED FILTERS</h4><br/>
-                <div><input type="radio" id="f1" name="f" />
+                <div><input type="radio" id="f1" name="f"/>
                     <label for="f1">Filter 1</label>
                 </div>
                 <div><input type="radio" id="f2" name="f" />
