@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import productpic from "../Product1.jpg";
-import clothes from './clothes';
+import axios from 'axios'
+
+
+
+
+const getProducts=()=>{
+    
+    axios("https://myntra-server.herokuapp.com/products")
+    .then(response=>{
+        console.log(response.json());
+        return response.data
+    }).catch(error=>{
+        console.log(error)
+    })
+    
+}
+
+
+
 
 function createProduct(clothes) {
+    
     return (
         <Filternext
             id={clothes.id}
             brand={clothes.brand}
-            size={clothes.Size}
-            gender={clothes.Gender}
-            category={clothes.Category}
+            size={clothes.size}
+            gender={clothes.gender}
+            category={clothes.category}
         />
     );
 }
@@ -26,7 +45,18 @@ function Filternext(props) {
     )
 }
 
-const home = () => {
+const Home=()=>{
+        const [product,setClothes] =useState([])
+
+        useEffect(()=>{
+            axios("https://myntra-server.herokuapp.com/products")
+            .then(response=>{
+                setClothes(response.data)
+            }).catch(error=>{
+                console.log(error)
+            })
+        })
+
     return (
         <div className="Home">
             <div className="filterDrop">
@@ -91,9 +121,9 @@ const home = () => {
                     </li>
                 </ul>
             </div>
-            <dl className="products">{clothes.map(createProduct)}</dl>
+            <dl className="products">{product.map(createProduct)}</dl>
         </div>
     )
 }
 
-export default home
+export default Home
