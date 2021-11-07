@@ -2,24 +2,6 @@ import React, { Component, useEffect, useState } from 'react';
 import productpic from "../Product1.jpg";
 import axios from 'axios'
 
-
-
-
-const getProducts = () => {
-
-    axios("https://myntra-server.herokuapp.com/products")
-        .then(response => {
-            console.log(response.json());
-            return response.data
-        }).catch(error => {
-            console.log(error)
-        })
-
-}
-
-
-
-
 function createProduct(clothes) {
 
     return (

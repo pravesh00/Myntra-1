@@ -1,6 +1,30 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import { useState } from 'react/cjs/react.development';
 
-const sizeprofile = () => {
+function createSize(clothes) {
+
+    return (
+        <div className="name"
+            
+        >{clothes.name}</div>
+    );
+}
+
+const Sizeprofile = () => {
+
+    const [sizes,setSizes]=useState([]);
+
+    useEffect(()=>{
+        axios("https://myntra-server.herokuapp.com/size")
+        .then(response => {
+            setSizes(response.data)
+        }).catch(error => {
+            console.log(error)
+        })
+    })
+
+
     return (
         <div>
             <h1>Size Profile</h1>
@@ -8,11 +32,7 @@ const sizeprofile = () => {
                 <div className="wl">
                     <div id="profiles">Profiles</div>
                     <div className="names">
-                        <div className="name">Aarjaviy</div>
-                        <div className="name">Akshit</div>
-                        <div className="name">Ashutosh</div>
-                        <div className="name">Dipti</div>
-                        <div className="name">Pravesh</div>
+                        {sizes.map(createSize)}
                     </div>
                 </div>
                 <div className="wr">
@@ -65,4 +85,4 @@ const sizeprofile = () => {
     )
 }
 
-export default sizeprofile
+export default Sizeprofile
