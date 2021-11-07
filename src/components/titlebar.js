@@ -1,6 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-const titlebar = () => {
+import { useEffect,useState} from 'react'
+import axios from 'axios'
+
+function createSize(clothes) {
+
+    return (
+        <Link to="/"
+            
+        >Buying for {clothes.name}</Link>
+    );
+}
+
+const Titlebar = () => {
+
+    const [sizes,setSizes]=useState([]);
+
+    useEffect(()=>{
+        axios("https://myntra-server.herokuapp.com/size")
+        .then(response => {
+            setSizes(response.data)
+        }).catch(error => {
+            console.log(error)
+        })
+    })
+
     return (
         <div>
             <ul className="titlebar">
@@ -8,11 +32,7 @@ const titlebar = () => {
                 <li className="ss">
                     <Link to="/sizeprofile">Smart Size</Link>
                     <div className="dropdown-content">
-                        <Link to="/">Buying for Akshit</Link>
-                        <Link to="/">Buying for Ashutosh</Link>
-                        <Link to="/">Buying for Aarjaviy</Link>
-                        <Link to="/">Buying for Pravesh</Link>
-                        <Link to="/">Buying for Dipti</Link>
+                        {sizes.map(createSize)}
                         <Link to="/">Add Size Profile</Link>
                     </div>
                 </li>
@@ -23,4 +43,4 @@ const titlebar = () => {
     )
 }
 
-export default titlebar
+export default Titlebar
