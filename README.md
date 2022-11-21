@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Link for the Figma Prototype
+(https://www.figma.com/proto/YWFeaCXf07i3iRyg4SkTdL/Myntra-Hackerramp?node-id=1%3A2&starting-point-node-id=1%3A2)
